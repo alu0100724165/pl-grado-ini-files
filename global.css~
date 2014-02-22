@@ -41,7 +41,7 @@ body
  background-color:#b0c4de;  /* blue */
 }
 
-#zonaDrop {
+#drop_zone {
 	color: white;
 	text-align: center;
 	line-height: 100px;

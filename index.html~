@@ -15,7 +15,7 @@
   </head>
   <body>
     <h1>INI files</h1>
-     <div id="zonaDrop">Arrastra el fichero aquí</div><br><br>
+     <div id="drop_zone">Arrastra el fichero aquí</div><br><br>
     <input type="file" id="fileinput" />
     <div id="out" class="hidden">
     <table>
