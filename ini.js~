@@ -1,6 +1,11 @@
 "use strict"; // Use ECMAScript 5 strict mode in browsers that support it
 
 $(document).ready(function() {
+	if (window.localStorage && localStorage.initialinput && localStorage.finaloutput) {//local storage
+	  out.className = 'unhidden';
+	  initialinput.innerHTML = localStorage.initialinput;
+	  finaloutput.innerHTML = localStorage.finaloutput;
+}
    //drag and drop
 
    var dropZone = document.getElementById('zonaDrop');
@@ -25,6 +30,11 @@ function calculate(evt) {
       out.className = 'unhidden';
       initialinput.innerHTML = contents;
       finaloutput.innerHTML = pretty;
+      
+      if (window.localStorage) {// para guardar en local la tabla actual
+			localStorage.initialinput = contents;
+			localStorage.finaloutput = pretty;
+		}
     }
     r.readAsText(f);
   } else { 
@@ -90,6 +100,31 @@ function handleFileSelect(evt) {
   	evt.preventDefault();
 
 	var files = evt.dataTransfer.files; // FileList object.
+	
+	for (var i = 0, f; f = files[i]; i++) {
+
+	  if (f) {
+	    var r = new FileReader();
+	    r.onload = function(e) { 
+	      var contents = e.target.result;	      
+	      var tokens = lexer(contents);
+	      var pretty = tokensToString(tokens);
+	      
+	      out.className = 'unhidden';
+	      initialinput.innerHTML = contents;
+	      finaloutput.innerHTML = pretty;
+	      
+	      if (window.localStorage) {// para guardar en local la tabla actual
+				localStorage.initialinput = contents;
+				localStorage.finaloutput = pretty;
+	      }
+
+	    }
+	    r.readAsText(f);
+	  }else { 
+	    alert("Failed to load file");
+	  }
+	}
    // files is a FileList of File objects. List some properties.
    var template = _.template(usageList.innerHTML);
    document.getElementById('list').innerHTML = template({ files : files});
