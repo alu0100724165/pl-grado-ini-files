@@ -11,7 +11,7 @@ html *
     margin: 10px 5px 0 0;
   }
 
-h1            { text-align: center; font-size: x-large; }
+h1            { text-align: center; font-size: 54px; font-family: Impact; margin-bottom: 0px; margin-top: 10px; }
 th, td        { vertical-align: top; text-align: left; }   
 /* #finaltable  * { color: white; background-color: black; }   */
 
@@ -20,10 +20,10 @@ th, td        { vertical-align: top; text-align: left; }
 #finaltable:hover td { background-color: blue; } 
 tr:nth-child(odd)    { background-color:#eee; }
 tr:nth-child(even)    { background-color:#00FF66; }
-input        { text-align: right;  border: none;       }     /* Align input to the right  */
+input        { text-align: center; border: none;  margin: auto;}     /* Align input to the right  */
 textarea     { border: outset; border-color: white;       }                        
-table        { border: inset; border-color: white; }
-.hidden      { display: none; }
+table        { border: inset; border-color: white; margin: auto; }
+.hidden      { display: none;}
 .unhidden    { display: block; }
 table.center { margin-left:auto; margin-right:auto; }
 #result      { border-color: red; }
@@ -38,17 +38,55 @@ span.error { background-color: red }
 
 body
 {
- background-color:#b0c4de;  /* blue */
+ background-color:#D7DDC4;  /* blue */
 }
-
+#linea{
+	background-color: black;
+	height: 2px;
+	margin: auto;
+	margin-bottom: 10px;
+	width: 50%;		
+	}
 #zonaDrop {
 	color: white;
 	text-align: center;
 	line-height: 100px;
 	height: 100px;
-	width: 600px;
+	width: 50%;
 	margin: auto;
 	border: outset;
-	border-color: black; 
+	border-color: :#0F527A;
 	background-color: black;
+}
+
+.barra{
+				
+				width: 50%;
+				margin: auto;
+				text-align: center;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			
+.btn{
+	background-color:#0F527A;
+	text-align: center;
+	font-size: 24px;
+	color:white;
+	font-weight: bold;	
+	width: 180px;
+	padding-right: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	cursor: pointer;	
+	display: inline-block;
+	border: solid;
+	border-color: white;
+	text-decoration:none; 
+	
+	}
+	.btn:hover {
+	background-color: #245191;
+	border: 1px solid #0f2557;
+	border-radius: 9px;
 }
