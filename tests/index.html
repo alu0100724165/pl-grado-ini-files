@@ -4,18 +4,24 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mocha.css" />
-    <link href="global.css" rel="stylesheet" type="text/css">
+    <link href="../global.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </head>
   <body>
 
+	 <div id="resultados">
     <div id="mocha"></div>
-    <h1>Pruebas Mocha</h1>
-    
+    </div>
+    <h1>PRUEBAS MOCHA</h1>
+    <div id="linea"></div>
+    <div class="barra">
+    	<a href="../index.html" class="btn"> INICIO</a>
+		<a href="index.html" class="btn"> TEST</a>	
+		<a href="https://github.com/alu0100724165/pl-grado-ini-files" class="btn"> REPOSITORIO</a>
+	</div>
     <div id="zonaDrop">Arrastra el fichero aquí</div><br><br>
-    <input type="file" id="fileinput" /><br><br>
     <div id="out" class="hidden">
     <table>
       <tr><th>Original</th><th>Tokens</th></tr>
@@ -39,6 +45,6 @@
     <script>
       mocha.run();
     </script>
-
+	<div id="linea"></div>
   </body>
 </html>
