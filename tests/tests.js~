@@ -10,11 +10,11 @@
 
 		assert.equal( output[0].type, 'comments');
 
-		var input = "#comentario";
+		var input1 = "#comentario";
 
-		var output = lexer(input);
+		var output1 = lexer(input1);
 
-		assert.equal( output[0].type, 'comments');
+		assert.equal( output1[0].type, 'comments');
 	});
 	
 	test('Comprobar header', function() {
@@ -25,6 +25,7 @@
 
 		assert.equal( output[0].type, 'header');
 	});
+	
 
 	test('Comprobar error', function (){
 
